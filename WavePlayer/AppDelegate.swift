@@ -16,6 +16,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let tabBarController = UITabBarController()
+        
+        let playlistsViewController = PlaylistsViewController()
+        let albumsViewController = AlbumsViewController()
+        let songsViewController = SongsViewController()
+        let artistsViewController = ArtistsViewController()
+        let moreViewController = MoreViewController()
+        
+        playlistsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        albumsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+        songsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 3)
+        artistsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 4)
+        moreViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 5)
+
+        let viewControllerList = [playlistsViewController, albumsViewController, songsViewController, artistsViewController, moreViewController]
+        
+        tabBarController.viewControllers = viewControllerList.map { UINavigationController(rootViewController: $0)}
+        
+        window?.rootViewController = tabBarController
         return true
     }
 
