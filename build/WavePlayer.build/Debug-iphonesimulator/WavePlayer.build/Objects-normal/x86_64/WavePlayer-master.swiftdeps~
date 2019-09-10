@@ -1,13 +1,13 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "789fa9981dcf52a6c0320620248894af"
-build_time: [1557629306, 697467000]
+build_time: [1559008159, 652323000]
 inputs:
   "/Users/admin/Desktop/WavePlayer/WavePlayer/View/MoreTableViewCell.swift": [1557580085, 0]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/AlbumsViewController.swift": [1557579163, 0]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/SongsViewController.swift": [1557579163, 0]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/Model/MusicLibrary.swift": [1557580565, 0]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/AppDelegate.swift": [1557578845, 0]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/NowPlayingViewController.swift": [1557629306, 0]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/NowPlayingViewController.swift": [1559008159, 0]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/MoreViewController.swift": [1557580024, 0]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/ArtistsViewController.swift": [1557579163, 0]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/PlaylistsViewController.swift": [1557579557, 0]

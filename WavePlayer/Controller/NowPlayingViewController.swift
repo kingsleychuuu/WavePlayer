@@ -9,34 +9,16 @@
 import UIKit
 
 class NowPlayingViewController: UIViewController {
-    let progress = Progress(totalUnitCount: 10)
-    
-    let backButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .red
-        button.setTitleColor(.gray, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
-        return button
-    }()
-    
     let albumImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .green
+        imageView.backgroundColor = .lightGray
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-    
-    let progressView: UIProgressView = {
-        let progress = UIProgressView()
-        progress.tintColor = .red
-        progress.translatesAutoresizingMaskIntoConstraints = false
-        return progress
-    }()
-    
+
     let playPauseButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .green
+        button.backgroundColor = .lightGray
         button.setTitleColor(.gray, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(playPauseButtonTapped), for: .touchUpInside)
@@ -45,7 +27,7 @@ class NowPlayingViewController: UIViewController {
     
     let previousButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .green
+        button.backgroundColor = .lightGray
         button.setTitleColor(.gray, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(previousButtonTapped), for: .touchUpInside)
@@ -54,7 +36,7 @@ class NowPlayingViewController: UIViewController {
     
     let nextButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .green
+        button.backgroundColor = .lightGray
         button.setTitleColor(.gray, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
@@ -63,7 +45,7 @@ class NowPlayingViewController: UIViewController {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .green
+        label.backgroundColor = .lightGray
         label.font = label.font.withSize(30)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Easily"
@@ -72,23 +54,29 @@ class NowPlayingViewController: UIViewController {
     
     let artistLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .green
+        label.backgroundColor = .lightGray
         label.font = label.font.withSize(15)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Bruno Major"
         return label
     }()
     
+    let shapeLayer = CAShapeLayer()
+    
+    let pathLayer = CAShapeLayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        
+        setupGestures()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setImageCornerRadius()
         setPlayPauseButtonCornerRadius()
+        setupShapeLayer()
+        setupWave()
     }
     
     func setImageCornerRadius() {
@@ -105,21 +93,16 @@ class NowPlayingViewController: UIViewController {
     
     func setupViews() {
         view.backgroundColor = .white
-        navigationController?.isNavigationBarHidden = true
         tabBarController?.tabBar.isHidden = true
-        setupBackButton()
         setupAlbumImageView()
-        setupProgressView()
         setupPlayPauseButton()
         setupPreviousButton()
         setupNextButton()
         setupTitleAndArtistLabel()
     }
     
-    func setupBackButton() {
-        view.addSubview(backButton)
-        backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        backButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
+    func setupGestures() {
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
     func setupAlbumImageView() {
@@ -128,14 +111,6 @@ class NowPlayingViewController: UIViewController {
         albumImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
         albumImageView.widthAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
         albumImageView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
-    }
-    
-    func setupProgressView() {
-        view.addSubview(progressView)
-        progressView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        progressView.topAnchor.constraint(equalTo: albumImageView.bottomAnchor, constant: 30).isActive = true
-        progressView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
-        progressView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
     }
     
     func setupPlayPauseButton() {
@@ -172,8 +147,50 @@ class NowPlayingViewController: UIViewController {
         artistLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
     }
     
+    func setupShapeLayer() {
+        let circularPath = UIBezierPath(arcCenter: albumImageView.center, radius: (view.frame.width/4) + 10, startAngle: -CGFloat.pi/2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        
+        let trackLayer = CAShapeLayer()
+        trackLayer.path = circularPath.cgPath
+        trackLayer.strokeColor = UIColor.init(white: 0.9, alpha: 1).cgColor
+        trackLayer.lineWidth = 5
+        trackLayer.fillColor = UIColor.clear.cgColor
+        view.layer.addSublayer(trackLayer)
+        
+        shapeLayer.path = circularPath.cgPath
+        shapeLayer.strokeColor = UIColor.lightGray.cgColor
+        shapeLayer.lineWidth = 5
+        shapeLayer.lineCap = CAShapeLayerLineCap.round
+        shapeLayer.strokeEnd = 0
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        view.layer.addSublayer(shapeLayer)
+    }
+    
+    func setupWave() {
+        let centerY = view.frame.height / 2  // find the vertical center
+        let steps = 100                 // Divide the curve into steps
+        let stepX = view.frame.width / CGFloat(steps) // find the horizontal step distance
+        // Make a path
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 0, y: centerY))
+        // Loop and draw steps in straingt line segments
+        for i in 0...steps {
+            let x = CGFloat(i) * stepX
+            let y = (sin(Double(i) * 0.1) * 70) + Double(centerY)
+            path.addLine(to: CGPoint(x: x, y: CGFloat(y)))
+        }
+        
+        pathLayer.path = path.cgPath
+        pathLayer.lineWidth = 3
+        pathLayer.fillColor = UIColor.clear.cgColor
+        pathLayer.strokeColor = UIColor.red.cgColor
+        pathLayer.strokeStart = 0
+        pathLayer.strokeEnd = 1 // <<
+        view.layer.addSublayer(pathLayer)
+    }
+    
     @objc func backButtonTapped() {
-        //
+        
     }
     
     @objc func previousButtonTapped() {
@@ -181,24 +198,28 @@ class NowPlayingViewController: UIViewController {
     }
     
     @objc func playPauseButtonTapped() {
-        // 1
-        progressView.progress = 0.0
-        progress.completedUnitCount = 0
         
-        // 2
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
-            guard self.progress.isFinished == false else {
-                timer.invalidate()
-                return
-            }
-            
-            // 3
-            self.progress.completedUnitCount += 1
-            self.progressView.setProgress(Float(self.progress.fractionCompleted), animated: true)
-        }
     }
     
     @objc func nextButtonTapped() {
         
+    }
+    
+    @objc func handleTap() {
+        print("tapped")
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        basicAnimation.toValue = 1
+        basicAnimation.duration = 2
+        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
+        basicAnimation.isRemovedOnCompletion = true
+        shapeLayer.add(basicAnimation, forKey: "strokeEnd")
+        /*
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 3
+        animation.isRemovedOnCompletion = true
+        pathLayer.add(animation, forKey: "strokeEnd")
+ */
     }
 }

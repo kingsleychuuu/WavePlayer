@@ -249,6 +249,7 @@ SWIFT_CLASS("_TtC10WavePlayer24NowPlayingViewController")
 - (void)previousButtonTapped;
 - (void)playPauseButtonTapped;
 - (void)nextButtonTapped;
+- (void)handleTap;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
