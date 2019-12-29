@@ -18,6 +18,9 @@
 		8475FA662286FA41006C1FFC /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FA652286FA41006C1FFC /* NowPlayingViewController.swift */; };
 		8475FA6822870014006C1FFC /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FA6722870014006C1FFC /* MoreTableViewCell.swift */; };
 		8475FA6D22870113006C1FFC /* MusicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FA6C22870113006C1FFC /* MusicLibrary.swift */; };
+		84B3ECC723B87BFB004FA012 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3ECC423B87BFB004FA012 /* SpotifyAudioPlayback.framework */; };
+		84B3ECC823B87BFB004FA012 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3ECC523B87BFB004FA012 /* SpotifyAuthentication.framework */; };
+		84B3ECC923B87BFB004FA012 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3ECC623B87BFB004FA012 /* SpotifyMetadata.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,10 @@
 		8475FA652286FA41006C1FFC /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		8475FA6722870014006C1FFC /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		8475FA6C22870113006C1FFC /* MusicLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibrary.swift; sourceTree = "<group>"; };
+		84B3ECC423B87BFB004FA012 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = "../../Spotify-Demo/SpotifyAudioPlayback.framework"; sourceTree = "<group>"; };
+		84B3ECC523B87BFB004FA012 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = "../../Spotify-Demo/SpotifyAuthentication.framework"; sourceTree = "<group>"; };
+		84B3ECC623B87BFB004FA012 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = "../../Spotify-Demo/SpotifyMetadata.framework"; sourceTree = "<group>"; };
+		84B3ECCA23B87C7E004FA012 /* WavePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WavePlayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B3ECC723B87BFB004FA012 /* SpotifyAudioPlayback.framework in Frameworks */,
+				84B3ECC923B87BFB004FA012 /* SpotifyMetadata.framework in Frameworks */,
+				84B3ECC823B87BFB004FA012 /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +83,10 @@
 				8475FA522286CBBD006C1FFC /* Assets.xcassets */,
 				8475FA542286CBBD006C1FFC /* LaunchScreen.storyboard */,
 				8475FA572286CBBD006C1FFC /* Info.plist */,
+				84B3ECCA23B87C7E004FA012 /* WavePlayer.h */,
+				84B3ECC423B87BFB004FA012 /* SpotifyAudioPlayback.framework */,
+				84B3ECC523B87BFB004FA012 /* SpotifyAuthentication.framework */,
+				84B3ECC623B87BFB004FA012 /* SpotifyMetadata.framework */,
 			);
 			path = WavePlayer;
 			sourceTree = "<group>";
@@ -259,7 +273,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/admin/Desktop/WavePlayer/WavePlayer/WavePlayer.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 			};
 			name = Debug;
 		};
@@ -313,7 +329,9 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/admin/Desktop/WavePlayer/WavePlayer/WavePlayer.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -323,6 +341,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WavePlayer",
+				);
 				INFOPLIST_FILE = WavePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -330,6 +352,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Kingsley.WavePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/admin/Desktop/WavePlayer/WavePlayer/WavePlayer.h;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,6 +364,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WavePlayer",
+				);
 				INFOPLIST_FILE = WavePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,6 +375,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Kingsley.WavePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/admin/Desktop/WavePlayer/WavePlayer/WavePlayer.h;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

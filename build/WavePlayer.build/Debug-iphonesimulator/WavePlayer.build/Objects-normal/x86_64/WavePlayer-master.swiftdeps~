@@ -1,13 +1,13 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "789fa9981dcf52a6c0320620248894af"
-build_time: [1559008159, 652323000]
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "69f485de30f42de89bcdd15c234a6962"
+build_time: [1577600087, 225806000]
 inputs:
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/View/MoreTableViewCell.swift": [1557580085, 0]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/AlbumsViewController.swift": [1557579163, 0]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/SongsViewController.swift": [1557579163, 0]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/Model/MusicLibrary.swift": [1557580565, 0]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/AppDelegate.swift": [1557578845, 0]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/NowPlayingViewController.swift": [1559008159, 0]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/MoreViewController.swift": [1557580024, 0]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/ArtistsViewController.swift": [1557579163, 0]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/PlaylistsViewController.swift": [1557579557, 0]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/View/MoreTableViewCell.swift": [1577599400, 927894878]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/AlbumsViewController.swift": [1577599400, 925939889]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/SongsViewController.swift": [1577599400, 927151855]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/Model/MusicLibrary.swift": [1577599400, 927583117]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/AppDelegate.swift": [1577599400, 924293323]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/NowPlayingViewController.swift": [1577599400, 926753449]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/MoreViewController.swift": [1577599400, 926478642]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/ArtistsViewController.swift": [1577599400, 926236948]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/PlaylistsViewController.swift": [1577599400, 926961874]
