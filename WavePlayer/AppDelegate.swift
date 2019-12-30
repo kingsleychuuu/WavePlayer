@@ -24,25 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let tabBarController = UITabBarController()
-        
-        let playlistsViewController = PlaylistsViewController()
-        let albumsViewController = AlbumsViewController()
-        let songsViewController = SongsViewController()
-        let artistsViewController = ArtistsViewController()
-        let moreViewController = MoreViewController()
-        
-        playlistsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
-        albumsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
-        songsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 3)
-        artistsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 4)
-        moreViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 5)
-
-        let viewControllerList = [playlistsViewController, albumsViewController, songsViewController, artistsViewController, moreViewController]
-        
-        tabBarController.viewControllers = viewControllerList.map { UINavigationController(rootViewController: $0)}
-        
-        window?.rootViewController = tabBarController
+        let viewController = NowPlayingViewController()
+        window?.rootViewController = viewController
         return true
     }
     
@@ -54,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     print("error!")
                 }
                 let userDefaults = UserDefaults.standard
-                
                 let sessionData = NSKeyedArchiver.archivedData(withRootObject: session)
                 userDefaults.set(sessionData, forKey: "SpotifySession")
                 userDefaults.synchronize()
