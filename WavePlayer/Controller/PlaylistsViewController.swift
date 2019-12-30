@@ -23,6 +23,6 @@ class PlaylistsViewController: UITableViewController {
     
     @objc func nowPlayingTapped() {
         let nowPlayingViewController = NowPlayingViewController()
-        navigationController?.pushViewController(nowPlayingViewController, animated: true)
+        present(nowPlayingViewController, animated: true)
     }
 }

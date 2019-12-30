@@ -21,6 +21,7 @@
 		84B3ECC723B87BFB004FA012 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3ECC423B87BFB004FA012 /* SpotifyAudioPlayback.framework */; };
 		84B3ECC823B87BFB004FA012 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3ECC523B87BFB004FA012 /* SpotifyAuthentication.framework */; };
 		84B3ECC923B87BFB004FA012 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3ECC623B87BFB004FA012 /* SpotifyMetadata.framework */; };
+		84B3ECCC23B87F89004FA012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ECCB23B87F89004FA012 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		84B3ECC523B87BFB004FA012 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = "../../Spotify-Demo/SpotifyAuthentication.framework"; sourceTree = "<group>"; };
 		84B3ECC623B87BFB004FA012 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = "../../Spotify-Demo/SpotifyMetadata.framework"; sourceTree = "<group>"; };
 		84B3ECCA23B87C7E004FA012 /* WavePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WavePlayer.h; sourceTree = "<group>"; };
+		84B3ECCB23B87F89004FA012 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				8475FA612286CDB2006C1FFC /* ArtistsViewController.swift */,
 				8475FA632286CDD8006C1FFC /* MoreViewController.swift */,
 				8475FA652286FA41006C1FFC /* NowPlayingViewController.swift */,
+				84B3ECCB23B87F89004FA012 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				TargetAttributes = {
 					8475FA472286CBBC006C1FFC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -190,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B3ECCC23B87F89004FA012 /* ViewController.swift in Sources */,
 				8475FA6822870014006C1FFC /* MoreTableViewCell.swift in Sources */,
 				8475FA602286CD66006C1FFC /* AlbumsViewController.swift in Sources */,
 				8475FA4E2286CBBC006C1FFC /* SongsViewController.swift in Sources */,
@@ -354,7 +359,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/admin/Desktop/WavePlayer/WavePlayer/WavePlayer.h;
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -377,7 +382,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/admin/Desktop/WavePlayer/WavePlayer/WavePlayer.h;
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

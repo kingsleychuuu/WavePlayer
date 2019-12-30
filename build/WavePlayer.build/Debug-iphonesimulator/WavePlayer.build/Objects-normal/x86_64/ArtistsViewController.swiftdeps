@@ -28,7 +28,6 @@ depends-member:
 - !private ["s7CVarArgP", "UIBarButtonItem"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "navigationItem"]
 - !private ["s7CVarArgP", "nowPlayingTapped"]
 - !private ["s7CVarArgP", "print"]
@@ -37,7 +36,6 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s28CustomDebugStringConvertibleP", "UIBarButtonItem"]
 - ["s28CustomDebugStringConvertibleP", ""]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
 - !private ["s28CustomDebugStringConvertibleP", "nowPlayingTapped"]
@@ -48,7 +46,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "UIBarButtonItem"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "navigationItem"]
 - !private ["s23CustomStringConvertibleP", "nowPlayingTapped"]
 - !private ["s23CustomStringConvertibleP", "print"]
@@ -57,7 +54,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["SQ", "UIBarButtonItem"]
 - ["SQ", ""]
-- !private ["SQ", "init"]
 - !private ["SQ", "init"]
 - !private ["SQ", "navigationItem"]
 - !private ["SQ", "nowPlayingTapped"]
@@ -69,7 +65,6 @@ depends-member:
 - !private ["SH", "UIBarButtonItem"]
 - ["SH", ""]
 - !private ["SH", "init"]
-- !private ["SH", "init"]
 - !private ["SH", "navigationItem"]
 - !private ["SH", "nowPlayingTapped"]
 - !private ["SH", "plain"]
@@ -80,7 +75,6 @@ depends-member:
 - !private ["So8NSCodingP", "UIBarButtonItem"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "navigationItem"]
 - !private ["So8NSCodingP", "nowPlayingTapped"]
 - !private ["So8NSCodingP", "print"]
@@ -90,7 +84,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UIBarButtonItem"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationItem"]
 - !private ["So26NSExtensionRequestHandlingP", "nowPlayingTapped"]
 - !private ["So26NSExtensionRequestHandlingP", "print"]
@@ -98,7 +91,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So8NSObjectC", "UIBarButtonItem"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "navigationItem"]
 - ["So8NSObjectC", "nowPlayingTapped"]
 - !private ["So8NSObjectC", "print"]
@@ -108,7 +100,6 @@ depends-member:
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectP", "UIBarButtonItem"]
 - ["So8NSObjectP", ""]
-- !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "navigationItem"]
 - !private ["So8NSObjectP", "nowPlayingTapped"]
@@ -123,7 +114,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UIBarButtonItem"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "init"]
-- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "navigationItem"]
 - !private ["So21UIAppearanceContainerP", "nowPlayingTapped"]
 - !private ["So21UIAppearanceContainerP", "print"]
@@ -134,7 +124,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "UIBarButtonItem"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "init"]
-- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "navigationItem"]
 - !private ["So18UIContentContainerP", "nowPlayingTapped"]
 - !private ["So18UIContentContainerP", "print"]
@@ -142,7 +131,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So18UIFocusEnvironmentP", "UIBarButtonItem"]
 - ["So18UIFocusEnvironmentP", ""]
-- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "navigationItem"]
 - !private ["So18UIFocusEnvironmentP", "nowPlayingTapped"]
@@ -153,7 +141,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIBarButtonItem"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
-- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationItem"]
 - !private ["So30UIPasteConfigurationSupportingP", "nowPlayingTapped"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
@@ -161,7 +148,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So11UIResponderC", "UIBarButtonItem"]
 - ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "navigationItem"]
 - ["So11UIResponderC", "nowPlayingTapped"]
 - !private ["So11UIResponderC", "print"]
@@ -171,7 +157,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIBarButtonItem"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
-- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationItem"]
 - !private ["So30UIResponderStandardEditActionsP", "nowPlayingTapped"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
@@ -179,7 +164,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So20UIScrollViewDelegateP", "UIBarButtonItem"]
 - ["So20UIScrollViewDelegateP", ""]
-- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "navigationItem"]
 - !private ["So20UIScrollViewDelegateP", "nowPlayingTapped"]
@@ -190,7 +174,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UIBarButtonItem"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "init"]
-- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "navigationItem"]
 - !private ["So16UIStateRestoringP", "nowPlayingTapped"]
 - !private ["So16UIStateRestoringP", "print"]
@@ -199,7 +182,6 @@ depends-member:
 - !private ["So21UITableViewControllerC", "UIBarButtonItem"]
 - ["So21UITableViewControllerC", ""]
 - ["So21UITableViewControllerC", "init"]
-- !private ["So21UITableViewControllerC", "init"]
 - !private ["So21UITableViewControllerC", "navigationItem"]
 - ["So21UITableViewControllerC", "nowPlayingTapped"]
 - !private ["So21UITableViewControllerC", "print"]
@@ -209,7 +191,6 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "UIBarButtonItem"]
 - ["So21UITableViewDataSourceP", ""]
 - !private ["So21UITableViewDataSourceP", "init"]
-- !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So21UITableViewDataSourceP", "navigationItem"]
 - !private ["So21UITableViewDataSourceP", "nowPlayingTapped"]
 - !private ["So21UITableViewDataSourceP", "print"]
@@ -217,7 +198,6 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "viewDidLoad"]
 - !private ["So19UITableViewDelegateP", "UIBarButtonItem"]
 - ["So19UITableViewDelegateP", ""]
-- !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "navigationItem"]
 - !private ["So19UITableViewDelegateP", "nowPlayingTapped"]
@@ -227,7 +207,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UIBarButtonItem"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "navigationItem"]
 - !private ["So18UITraitEnvironmentP", "nowPlayingTapped"]
 - !private ["So18UITraitEnvironmentP", "print"]
@@ -236,7 +215,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "UIBarButtonItem"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "init"]
-- !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "navigationItem"]
 - !private ["So23UIUserActivityRestoringP", "nowPlayingTapped"]
 - !private ["So23UIUserActivityRestoringP", "print"]
@@ -244,7 +222,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - !private ["So16UIViewControllerC", "UIBarButtonItem"]
 - ["So16UIViewControllerC", "init"]
-- !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "navigationItem"]
 - ["So16UIViewControllerC", "nowPlayingTapped"]
 - !private ["So16UIViewControllerC", "print"]
@@ -253,7 +230,6 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIBarButtonItem"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "nowPlayingTapped"]
@@ -298,12 +274,15 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
@@ -356,16 +335,20 @@ depends-external:
 - "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTFollow.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "daa693b331039e5913ee166820cfdabd"
