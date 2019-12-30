@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class NowPlayingViewController: UIViewController {
     let albumImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "GoodFaith.png")
+        imageView.image = UIImage(named: "LoveYourself.png")
         imageView.backgroundColor = .lightGray
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -19,9 +20,11 @@ class NowPlayingViewController: UIViewController {
 
     let playPauseButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .clear
-        button.layer.borderColor = UIColor.white.cgColor
-        button.layer.borderWidth = 2
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.5
+        button.layer.shadowOffset = .zero
+        button.layer.shadowRadius = 10
+        button.setImage(UIImage(named: "play.png"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(playPauseButtonTapped), for: .touchUpInside)
         return button
@@ -29,9 +32,11 @@ class NowPlayingViewController: UIViewController {
     
     let previousButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .clear
-        button.layer.borderColor = UIColor.white.cgColor
-        button.layer.borderWidth = 2
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.5
+        button.layer.shadowOffset = .zero
+        button.layer.shadowRadius = 10
+        button.setImage(UIImage(named: "previous.png"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(previousButtonTapped), for: .touchUpInside)
         return button
@@ -39,9 +44,11 @@ class NowPlayingViewController: UIViewController {
     
     let nextButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .clear
-        button.layer.borderColor = UIColor.white.cgColor
-        button.layer.borderWidth = 2
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.5
+        button.layer.shadowOffset = .zero
+        button.layer.shadowRadius = 10
+        button.setImage(UIImage(named: "next.png"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         return button
@@ -49,21 +56,29 @@ class NowPlayingViewController: UIViewController {
     
     let titleLabel: UILabel = {
         let label = UILabel()
+        label.layer.shadowColor = UIColor.black.cgColor
+        label.layer.shadowOpacity = 1
+        label.layer.shadowOffset = .zero
+        label.layer.shadowRadius = 10
         label.backgroundColor = .clear
         label.textColor = .white
         label.font = label.font.withSize(40)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "All My Friends"
+        label.text = "Serendipity"
         return label
     }()
     
     let artistLabel: UILabel = {
         let label = UILabel()
+        label.layer.shadowColor = UIColor.black.cgColor
+        label.layer.shadowOpacity = 1
+        label.layer.shadowOffset = .zero
+        label.layer.shadowRadius = 10
         label.backgroundColor = .clear
         label.textColor = .white
         label.font = label.font.withSize(20)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Madeon"
+        label.text = "BTS"
         return label
     }()
     
@@ -90,43 +105,42 @@ class NowPlayingViewController: UIViewController {
     
     var displayLink: CADisplayLink?
     var startTime: CFAbsoluteTime?
-    
-    let albumArtShapeLayer = CAShapeLayer()
+    let scrubbingShapeLayer = CAShapeLayer()
+    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        
+        setupAudioPlayer()
+        setupWaveLayer()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setImageCornerRadius()
-        setupButtonViews()
         setupScrubbingShapeLayer()
-        setupWaveLayer()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         stopDisplayLink()
     }
     
+    func setupAudioPlayer() {
+        let audioFile = Bundle.main.path(forResource: "serendipity", ofType: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioFile!))
+            audioPlayer.isMeteringEnabled = true
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: [AVAudioSession.CategoryOptions.mixWithOthers])
+        } catch {
+            print(error)
+        }
+        audioPlayer.pause()
+    }
+    
     func setImageCornerRadius() {
         albumImageView.layer.cornerRadius = albumImageView.frame.width/2
         albumImageView.layer.masksToBounds = true
         albumImageView.clipsToBounds = true
-    }
-    
-    func setupButtonViews() {
-        playPauseButton.layer.cornerRadius = playPauseButton.frame.width/2
-        playPauseButton.layer.masksToBounds = true
-        playPauseButton.clipsToBounds = true
-        previousButton.layer.cornerRadius = previousButton.frame.width/2
-        previousButton.layer.masksToBounds = true
-        previousButton.clipsToBounds = true
-        nextButton.layer.cornerRadius = nextButton.frame.width/2
-        nextButton.layer.masksToBounds = true
-        nextButton.clipsToBounds = true
     }
     
     func setupViews() {
@@ -179,8 +193,6 @@ class NowPlayingViewController: UIViewController {
         view.addSubview(titleLabel)
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo: artistLabel.topAnchor, constant: -10).isActive = true
-        
-        
     }
     
     func setupScrubbingShapeLayer() {
@@ -193,13 +205,21 @@ class NowPlayingViewController: UIViewController {
         trackLayer.fillColor = UIColor.clear.cgColor
         view.layer.addSublayer(trackLayer)
         
-        albumArtShapeLayer.path = circularPath.cgPath
-        albumArtShapeLayer.strokeColor = albumImageView.image?.averageColor?.cgColor
-        albumArtShapeLayer.lineWidth = 5
-        albumArtShapeLayer.lineCap = CAShapeLayerLineCap.round
-        albumArtShapeLayer.strokeEnd = 0
-        albumArtShapeLayer.fillColor = UIColor.clear.cgColor
-        view.layer.addSublayer(albumArtShapeLayer)
+        scrubbingShapeLayer.path = circularPath.cgPath
+        scrubbingShapeLayer.strokeColor = albumImageView.image?.averageColor?.cgColor
+        scrubbingShapeLayer.lineWidth = 5
+        scrubbingShapeLayer.lineCap = CAShapeLayerLineCap.round
+        scrubbingShapeLayer.strokeEnd = 0
+        scrubbingShapeLayer.fillColor = UIColor.clear.cgColor
+        view.layer.addSublayer(scrubbingShapeLayer)
+        
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        basicAnimation.toValue = 1
+        basicAnimation.duration = audioPlayer.duration
+        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
+        basicAnimation.isRemovedOnCompletion = true
+        scrubbingShapeLayer.add(basicAnimation, forKey: "strokeEnd")
+        pauseAnimation(layer: scrubbingShapeLayer)
     }
     
     func setupWaveLayer() {
@@ -210,7 +230,6 @@ class NowPlayingViewController: UIViewController {
         highWaveShapeLayer.fillColor = averageColor
         mediumWaveShapeLayer.fillColor = averageColor
         lowWaveShapeLayer.fillColor = averageColor
-        
         startDisplayLink()
     }
     
@@ -226,23 +245,24 @@ class NowPlayingViewController: UIViewController {
         displayLink = nil
     }
     
-    @objc func handleDisplayLink(_ displayLink: CADisplayLink) {
-        let elapsed = CFAbsoluteTimeGetCurrent() - startTime!
-        highWaveShapeLayer.path = wave(at: elapsed, shift: 3, amplitude: 35, varyAmp: true).cgPath
-        mediumWaveShapeLayer.path = wave(at: elapsed, shift: 2, amplitude: 12, varyAmp: false).cgPath
-        lowWaveShapeLayer.path = wave(at: elapsed, shift: 1.5, amplitude: 27, varyAmp: true).cgPath
+    @objc func handleInitialDisplayLink(_ displayLink: CADisplayLink) {
+        
     }
     
-    func wave(at elapsed: Double, shift: Double, amplitude: CGFloat, varyAmp: Bool) -> UIBezierPath {
+    @objc func handleDisplayLink(_ displayLink: CADisplayLink) {
+        let elapsed = CFAbsoluteTimeGetCurrent() - startTime!
+        audioPlayer.updateMeters()
+        let db = audioPlayer.averagePower(forChannel: 0)
+        let power = CGFloat(pow(10.0, db / 20.0) * 70.0)
+        highWaveShapeLayer.path = wave(changeRate: elapsed, peaks: 3, amplitude: power).cgPath
+        mediumWaveShapeLayer.path = wave(changeRate: elapsed/1.5, peaks: 2, amplitude: power).cgPath
+        lowWaveShapeLayer.path = wave(changeRate: elapsed/2, peaks: 1.5, amplitude: power).cgPath
+    }
+    
+    func wave(changeRate: Double, peaks: Double, amplitude: CGFloat) -> UIBezierPath {
         let centerY = view.bounds.height / 2 + 50
-        let amp = CGFloat(50) - abs(fmod(CGFloat(elapsed), 3) - 1.5) * 40
-        
         func f(_ x: Int) -> CGFloat {
-            if varyAmp {
-                return sin(((CGFloat(x) / view.bounds.width) + CGFloat(elapsed)) * CGFloat(shift) * .pi) * amp + centerY
-            } else {
-                return sin(((CGFloat(x) / view.bounds.width) + CGFloat(elapsed)) * CGFloat(shift) * .pi) * amplitude + centerY
-            }
+            return sin(((CGFloat(x) / view.bounds.width) + CGFloat(changeRate)) * CGFloat(peaks) * .pi) * amplitude + centerY
         }
         
         let path = UIBezierPath()
@@ -266,17 +286,39 @@ class NowPlayingViewController: UIViewController {
     }
     
     @objc func playPauseButtonTapped() {
-        print("tapped")
-        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        basicAnimation.toValue = 1
-        basicAnimation.duration = 60
-        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
-        basicAnimation.isRemovedOnCompletion = true
-        albumArtShapeLayer.add(basicAnimation, forKey: "strokeEnd")
+        if audioPlayer.isPlaying {
+            audioPlayer.pause()
+            pauseAnimation(layer: scrubbingShapeLayer)
+            displayLink?.isPaused = true
+            playPauseButton.setImage(UIImage(named: "play.png"), for: .normal)
+        } else {
+            audioPlayer.play()
+            resumeAnimation(layer: scrubbingShapeLayer)
+            displayLink?.isPaused = false
+            playPauseButton.setImage(UIImage(named: "pause.png"), for: .normal)
+        }
     }
     
     @objc func nextButtonTapped() {
-        
+        audioPlayer.updateMeters()
+        let db = audioPlayer.averagePower(forChannel: 0)
+        let power = pow(10.0, db / 20.0) * 30.0
+        print(power)
+    }
+    
+    func pauseAnimation(layer: CAShapeLayer){
+        let pausedTime = layer.convertTime(CACurrentMediaTime(), from: nil)
+        layer.speed = 0.0
+        layer.timeOffset = pausedTime
+    }
+    
+    func resumeAnimation(layer: CAShapeLayer){
+        let pausedTime = layer.timeOffset
+        layer.speed = 1.0
+        layer.timeOffset = 0.0
+        layer.beginTime = 0.0
+        let timeSincePause = layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
+        layer.beginTime = timeSincePause
     }
 }
 

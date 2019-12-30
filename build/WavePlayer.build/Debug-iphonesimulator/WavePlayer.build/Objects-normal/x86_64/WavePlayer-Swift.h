@@ -253,6 +253,7 @@ SWIFT_CLASS("_TtC10WavePlayer24NowPlayingViewController")
 - (void)viewDidLoad;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidDisappear:(BOOL)animated;
+- (void)handleInitialDisplayLink:(CADisplayLink * _Nonnull)displayLink;
 - (void)handleDisplayLink:(CADisplayLink * _Nonnull)displayLink;
 - (void)backButtonTapped;
 - (void)previousButtonTapped;

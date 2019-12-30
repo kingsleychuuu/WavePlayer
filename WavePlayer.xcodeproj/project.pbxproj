@@ -22,6 +22,7 @@
 		84B3ECC823B87BFB004FA012 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3ECC523B87BFB004FA012 /* SpotifyAuthentication.framework */; };
 		84B3ECC923B87BFB004FA012 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3ECC623B87BFB004FA012 /* SpotifyMetadata.framework */; };
 		84B3ECCC23B87F89004FA012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ECCB23B87F89004FA012 /* ViewController.swift */; };
+		84BCFD4423B9BBE700504A48 /* serendipity.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84BCFD4323B9BBE700504A48 /* serendipity.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		84B3ECC623B87BFB004FA012 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = "../../Spotify-Demo/SpotifyMetadata.framework"; sourceTree = "<group>"; };
 		84B3ECCA23B87C7E004FA012 /* WavePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WavePlayer.h; sourceTree = "<group>"; };
 		84B3ECCB23B87F89004FA012 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84BCFD4323B9BBE700504A48 /* serendipity.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = serendipity.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				8475FA542286CBBD006C1FFC /* LaunchScreen.storyboard */,
 				8475FA572286CBBD006C1FFC /* Info.plist */,
 				84B3ECCA23B87C7E004FA012 /* WavePlayer.h */,
+				84BCFD4323B9BBE700504A48 /* serendipity.mp3 */,
 				84B3ECC423B87BFB004FA012 /* SpotifyAudioPlayback.framework */,
 				84B3ECC523B87BFB004FA012 /* SpotifyAuthentication.framework */,
 				84B3ECC623B87BFB004FA012 /* SpotifyMetadata.framework */,
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8475FA562286CBBD006C1FFC /* LaunchScreen.storyboard in Resources */,
+				84BCFD4423B9BBE700504A48 /* serendipity.mp3 in Resources */,
 				8475FA532286CBBD006C1FFC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
