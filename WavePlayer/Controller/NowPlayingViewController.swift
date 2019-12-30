@@ -18,7 +18,7 @@ class NowPlayingViewController: UIViewController {
         return imageView
     }()
 
-    let playPauseButton: UIButton = {
+    let playButton: UIButton = {
         let button = UIButton()
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.5
@@ -26,7 +26,20 @@ class NowPlayingViewController: UIViewController {
         button.layer.shadowRadius = 10
         button.setImage(UIImage(named: "play.png"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(playPauseButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    let pauseButton: UIButton = {
+        let button = UIButton()
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.5
+        button.layer.shadowOffset = .zero
+        button.layer.shadowRadius = 10
+        button.isHidden = true
+        button.setImage(UIImage(named: "pause.png"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(pauseButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -162,25 +175,30 @@ class NowPlayingViewController: UIViewController {
     }
     
     func setupPlayPauseButtonConstraints() {
-        view.addSubview(playPauseButton)
-        playPauseButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        playPauseButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80).isActive = true
-        playPauseButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        playPauseButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        view.addSubview(playButton)
+        playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        playButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80).isActive = true
+        playButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        playButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        view.addSubview(pauseButton)
+        pauseButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        pauseButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80).isActive = true
+        pauseButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        pauseButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
     }
     
     func setupPreviousButtonConstraints() {
         view.addSubview(previousButton)
-        previousButton.centerYAnchor.constraint(equalTo: playPauseButton.centerYAnchor).isActive = true
-        previousButton.rightAnchor.constraint(equalTo: playPauseButton.leftAnchor, constant: -50).isActive = true
+        previousButton.centerYAnchor.constraint(equalTo: playButton.centerYAnchor).isActive = true
+        previousButton.rightAnchor.constraint(equalTo: playButton.leftAnchor, constant: -50).isActive = true
         previousButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         previousButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     
     func setupNextButtonConstraints() {
         view.addSubview(nextButton)
-        nextButton.centerYAnchor.constraint(equalTo: playPauseButton.centerYAnchor).isActive = true
-        nextButton.leftAnchor.constraint(equalTo: playPauseButton.rightAnchor, constant: 50).isActive = true
+        nextButton.centerYAnchor.constraint(equalTo: playButton.centerYAnchor).isActive = true
+        nextButton.leftAnchor.constraint(equalTo: playButton.rightAnchor, constant: 50).isActive = true
         nextButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
@@ -188,7 +206,7 @@ class NowPlayingViewController: UIViewController {
     func setupTitleAndArtistLabelConstraints() {
         view.addSubview(artistLabel)
         artistLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        artistLabel.bottomAnchor.constraint(equalTo: playPauseButton.topAnchor, constant: -50).isActive = true
+        artistLabel.bottomAnchor.constraint(equalTo: playButton.topAnchor, constant: -50).isActive = true
         
         view.addSubview(titleLabel)
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -285,18 +303,20 @@ class NowPlayingViewController: UIViewController {
         
     }
     
-    @objc func playPauseButtonTapped() {
-        if audioPlayer.isPlaying {
-            audioPlayer.pause()
-            pauseAnimation(layer: scrubbingShapeLayer)
-            displayLink?.isPaused = true
-            playPauseButton.setImage(UIImage(named: "play.png"), for: .normal)
-        } else {
-            audioPlayer.play()
-            resumeAnimation(layer: scrubbingShapeLayer)
-            displayLink?.isPaused = false
-            playPauseButton.setImage(UIImage(named: "pause.png"), for: .normal)
-        }
+    @objc func playButtonTapped() {
+        audioPlayer.play()
+        resumeAnimation(layer: scrubbingShapeLayer)
+        displayLink?.isPaused = false
+        playButton.isHidden = true
+        pauseButton.isHidden = false
+    }
+    
+    @objc func pauseButtonTapped() {
+        audioPlayer.pause()
+        pauseAnimation(layer: scrubbingShapeLayer)
+        displayLink?.isPaused = true
+        pauseButton.isHidden = true
+        playButton.isHidden = false
     }
     
     @objc func nextButtonTapped() {
