@@ -271,7 +271,12 @@ class NowPlayingViewController: UIViewController {
         let elapsed = CFAbsoluteTimeGetCurrent() - startTime!
         audioPlayer.updateMeters()
         let db = audioPlayer.averagePower(forChannel: 0)
-        let power = CGFloat(pow(10.0, db / 20.0) * 70.0)
+        let power = CGFloat(pow(10.0, db / 20.0) * 80.0)
+        /*
+        if power > 50 {
+            nextButtonTapped()
+        }
+ */
         highWaveShapeLayer.path = wave(changeRate: elapsed, peaks: 3, amplitude: power).cgPath
         mediumWaveShapeLayer.path = wave(changeRate: elapsed/1.5, peaks: 2, amplitude: power).cgPath
         lowWaveShapeLayer.path = wave(changeRate: elapsed/2, peaks: 1.5, amplitude: power).cgPath
@@ -320,10 +325,16 @@ class NowPlayingViewController: UIViewController {
     }
     
     @objc func nextButtonTapped() {
-        audioPlayer.updateMeters()
-        let db = audioPlayer.averagePower(forChannel: 0)
-        let power = pow(10.0, db / 20.0) * 30.0
-        print(power)
+        let red = CGFloat.random(in: 0...255)/255
+        let green = CGFloat.random(in: 0...255)/255
+        let blue = CGFloat.random(in: 0...255)/255
+        let color = UIColor(red: red, green: green, blue: blue, alpha: 0.5).cgColor
+        UIView.animate(withDuration: 1.0) {
+            self.highWaveShapeLayer.fillColor = color
+            self.mediumWaveShapeLayer.fillColor = color
+            self.lowWaveShapeLayer.fillColor = color
+            self.scrubbingShapeLayer.strokeColor = color
+        }
     }
     
     func pauseAnimation(layer: CAShapeLayer){
