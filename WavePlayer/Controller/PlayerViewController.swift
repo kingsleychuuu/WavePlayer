@@ -229,7 +229,7 @@ class PlayerViewController: UIViewController {
     func setupCloseButtonConstraints() {
         view.addSubview(closeButton)
         closeButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
-        closeButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
+        closeButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
     }
     
     func setupTitleAndArtistLabelConstraints() {

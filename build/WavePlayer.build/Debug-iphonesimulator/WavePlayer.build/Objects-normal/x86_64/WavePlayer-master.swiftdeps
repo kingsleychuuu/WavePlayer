@@ -1,10 +1,10 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "c7f7e343ed9226932b82c93496211bda"
-build_time: [1577773546, 101185000]
+build_time: [1577775880, 889004000]
 inputs:
   "/Users/admin/Desktop/WavePlayer/WavePlayer/Model/Song.swift": [1577700555, 824069218]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/SpotifyViewController.swift": [1577770775, 492237733]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/AppDelegate.swift": [1577770775, 520644951]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/View/TableViewCell.swift": [1577771927, 787309722]
   "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/TableViewController.swift": [1577773546, 22223409]
-  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/PlayerViewController.swift": [1577773530, 857000407]
+  "/Users/admin/Desktop/WavePlayer/WavePlayer/Controller/PlayerViewController.swift": [1577775880, 752773894]
