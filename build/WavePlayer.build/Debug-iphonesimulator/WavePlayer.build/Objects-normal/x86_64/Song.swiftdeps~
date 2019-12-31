@@ -1,0 +1,258 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Song"
+provides-nominal:
+- "10WavePlayer4SongC"
+provides-member:
+- ["10WavePlayer4SongC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- "Codable"
+- "NSObject"
+- "Song"
+- "String"
+- !private "StringLiteralType"
+- !private "~="
+depends-member:
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "album"]
+- !private ["s7CVarArgP", "albumArtURL"]
+- !private ["s7CVarArgP", "artist"]
+- !private ["s7CVarArgP", "audioURL"]
+- ["s7CVarArgP", "encode"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "title"]
+- ["s9CodingKeyP", "=="]
+- !private ["s9CodingKeyP", ""]
+- ["s9CodingKeyP", "_rawHashValue"]
+- ["s9CodingKeyP", "debugDescription"]
+- ["s9CodingKeyP", "description"]
+- ["s9CodingKeyP", "hash"]
+- ["s9CodingKeyP", "hashValue"]
+- ["s9CodingKeyP", "init"]
+- ["s9CodingKeyP", "intValue"]
+- ["s9CodingKeyP", "stringValue"]
+- ["s28CustomDebugStringConvertibleP", "=="]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_rawHashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "album"]
+- !private ["s28CustomDebugStringConvertibleP", "albumArtURL"]
+- !private ["s28CustomDebugStringConvertibleP", "artist"]
+- !private ["s28CustomDebugStringConvertibleP", "audioURL"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- ["s28CustomDebugStringConvertibleP", "description"]
+- ["s28CustomDebugStringConvertibleP", "encode"]
+- ["s28CustomDebugStringConvertibleP", "hash"]
+- ["s28CustomDebugStringConvertibleP", "hashValue"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "intValue"]
+- ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- ["s23CustomStringConvertibleP", "=="]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_rawHashValue"]
+- !private ["s23CustomStringConvertibleP", "album"]
+- !private ["s23CustomStringConvertibleP", "albumArtURL"]
+- !private ["s23CustomStringConvertibleP", "artist"]
+- !private ["s23CustomStringConvertibleP", "audioURL"]
+- ["s23CustomStringConvertibleP", "debugDescription"]
+- ["s23CustomStringConvertibleP", "description"]
+- ["s23CustomStringConvertibleP", "encode"]
+- ["s23CustomStringConvertibleP", "hash"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "intValue"]
+- ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- ["Se", ""]
+- !private ["Se", "album"]
+- !private ["Se", "albumArtURL"]
+- !private ["Se", "artist"]
+- !private ["Se", "audioURL"]
+- ["Se", "encode"]
+- ["Se", "init"]
+- !private ["Se", "title"]
+- !private ["s7DecoderP", "container"]
+- ["SE", ""]
+- !private ["SE", "album"]
+- !private ["SE", "albumArtURL"]
+- !private ["SE", "artist"]
+- !private ["SE", "audioURL"]
+- ["SE", "encode"]
+- ["SE", "init"]
+- !private ["SE", "title"]
+- !private ["s7EncoderP", "container"]
+- ["SQ", "=="]
+- ["SQ", ""]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "album"]
+- !private ["SQ", "albumArtURL"]
+- !private ["SQ", "artist"]
+- !private ["SQ", "audioURL"]
+- ["SQ", "debugDescription"]
+- ["SQ", "description"]
+- ["SQ", "encode"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- ["SQ", "intValue"]
+- ["SQ", "stringValue"]
+- !private ["SQ", "title"]
+- ["SH", "=="]
+- ["SH", ""]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "album"]
+- !private ["SH", "albumArtURL"]
+- !private ["SH", "artist"]
+- !private ["SH", "audioURL"]
+- ["SH", "debugDescription"]
+- ["SH", "description"]
+- ["SH", "encode"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- ["SH", "intValue"]
+- ["SH", "stringValue"]
+- !private ["SH", "title"]
+- !private ["s6HasherV", "combine"]
+- !private ["s22KeyedDecodingContainerV", "decode"]
+- !private ["s30KeyedDecodingContainerProtocolP", "decode"]
+- !private ["s22KeyedEncodingContainerV", "encode"]
+- !private ["s30KeyedEncodingContainerProtocolP", "encode"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "album"]
+- ["So8NSObjectC", "albumArtURL"]
+- ["So8NSObjectC", "artist"]
+- ["So8NSObjectC", "audioURL"]
+- ["So8NSObjectC", "encode"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "title"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "album"]
+- !private ["So8NSObjectP", "albumArtURL"]
+- !private ["So8NSObjectP", "artist"]
+- !private ["So8NSObjectP", "audioURL"]
+- ["So8NSObjectP", "encode"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "title"]
+- ["10WavePlayer4SongC", "String"]
+- ["10WavePlayer4SongC", "album"]
+- ["10WavePlayer4SongC", "albumArtURL"]
+- ["10WavePlayer4SongC", "artist"]
+- ["10WavePlayer4SongC", "audioURL"]
+- ["10WavePlayer4SongC", "deinit"]
+- ["10WavePlayer4SongC", "encode"]
+- ["10WavePlayer4SongC", "init"]
+- ["10WavePlayer4SongC", "title"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "album"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "albumArtURL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "artist"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "audioURL"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "encode"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+depends-nominal:
+- "s7CVarArgP"
+- "s9CodingKeyP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- !private "s7DecoderP"
+- "SE"
+- !private "s7EncoderP"
+- "SQ"
+- "SH"
+- !private "s6HasherV"
+- !private "s22KeyedDecodingContainerV"
+- !private "s30KeyedDecodingContainerProtocolP"
+- !private "s22KeyedEncodingContainerV"
+- !private "s30KeyedEncodingContainerProtocolP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "10WavePlayer4SongC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SPTPlaybackMetadata.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SpotifyMetadata.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTYourMusic.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTListPage.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTImage.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SPTDiskCache.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTBrowse.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SPTPlaybackState.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTJSONDecoding.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SPTDiskCaching.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTSearch.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAuthentication.framework/Headers/SPTAuth.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SpotifyAudioPlayback.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTTrack.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTSavedTrack.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTPartialTrack.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTPlaylistTrack.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTAlbum.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTPartialAlbum.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAuthentication.framework/Headers/SPTSession.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAuthentication.framework/Headers/SpotifyAuthentication.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAuthentication.framework/Headers/SPTConnectButton.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTTrackProvider.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SPTCircularBuffer.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SPTAudioStreamingController.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SPTCoreAudioController.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAuthentication.framework/Headers/SPTStoreViewController.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAuthentication.framework/Headers/SPTAuthViewController.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTUser.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/WavePlayer.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SPTAudioStreamingController_ErrorCodes.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAuthentication.framework/Headers/SPTEmbeddedImages.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTMetadataTypes.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SPTAudioPlaybackTypes.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTPartialObject.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyAudioPlayback.framework/Headers/SpPlaybackEvent.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTPlaylistSnapshot.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTRequest.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTPlaylistList.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTFeaturedPlaylistList.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTPartialPlaylist.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTArtist.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTPartialArtist.h"
+- "/Users/admin/Desktop/WavePlayer/WavePlayer/SpotifyMetadata.framework/Headers/SPTFollow.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "302cef54d30e666a053485c4d8d2a0ae"

@@ -22,12 +22,13 @@ depends-top-level:
 - !private "NSKeyedArchiver"
 - !private "Notification"
 - !private "NotificationCenter"
-- !private "NowPlayingViewController"
 - "SPTAuth"
 - "String"
 - !private "StringLiteralType"
+- !private "TableViewController"
 - "UIApplication"
 - "UIApplicationDelegate"
+- !private "UINavigationController"
 - "UIResponder"
 - !private "UIScreen"
 - "UIWindow"
@@ -39,10 +40,11 @@ depends-member:
 - !private ["10WavePlayer11AppDelegateC", "NSKeyedArchiver"]
 - !private ["10WavePlayer11AppDelegateC", "Notification"]
 - !private ["10WavePlayer11AppDelegateC", "NotificationCenter"]
-- !private ["10WavePlayer11AppDelegateC", "NowPlayingViewController"]
 - ["10WavePlayer11AppDelegateC", "SPTAuth"]
 - ["10WavePlayer11AppDelegateC", "String"]
+- !private ["10WavePlayer11AppDelegateC", "TableViewController"]
 - ["10WavePlayer11AppDelegateC", "UIApplication"]
+- !private ["10WavePlayer11AppDelegateC", "UINavigationController"]
 - !private ["10WavePlayer11AppDelegateC", "UIScreen"]
 - ["10WavePlayer11AppDelegateC", "UIWindow"]
 - ["10WavePlayer11AppDelegateC", "URL"]
@@ -71,8 +73,9 @@ depends-member:
 - !private ["s7CVarArgP", "NSKeyedArchiver"]
 - !private ["s7CVarArgP", "Notification"]
 - !private ["s7CVarArgP", "NotificationCenter"]
-- !private ["s7CVarArgP", "NowPlayingViewController"]
 - ["s7CVarArgP", "SPTAuth"]
+- !private ["s7CVarArgP", "TableViewController"]
+- !private ["s7CVarArgP", "UINavigationController"]
 - !private ["s7CVarArgP", "UIScreen"]
 - !private ["s7CVarArgP", "UIWindow"]
 - !private ["s7CVarArgP", "URL"]
@@ -113,8 +116,9 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "Name"]
 - !private ["s28CustomDebugStringConvertibleP", "Notification"]
 - !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
-- !private ["s28CustomDebugStringConvertibleP", "NowPlayingViewController"]
 - ["s28CustomDebugStringConvertibleP", "SPTAuth"]
+- !private ["s28CustomDebugStringConvertibleP", "TableViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "UINavigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIScreen"]
 - !private ["s28CustomDebugStringConvertibleP", "UIWindow"]
 - !private ["s28CustomDebugStringConvertibleP", "URL"]
@@ -156,8 +160,9 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "Name"]
 - !private ["s23CustomStringConvertibleP", "Notification"]
 - !private ["s23CustomStringConvertibleP", "NotificationCenter"]
-- !private ["s23CustomStringConvertibleP", "NowPlayingViewController"]
 - ["s23CustomStringConvertibleP", "SPTAuth"]
+- !private ["s23CustomStringConvertibleP", "TableViewController"]
+- !private ["s23CustomStringConvertibleP", "UINavigationController"]
 - !private ["s23CustomStringConvertibleP", "UIScreen"]
 - !private ["s23CustomStringConvertibleP", "UIWindow"]
 - !private ["s23CustomStringConvertibleP", "URL"]
@@ -200,8 +205,9 @@ depends-member:
 - !private ["SQ", "Name"]
 - !private ["SQ", "Notification"]
 - !private ["SQ", "NotificationCenter"]
-- !private ["SQ", "NowPlayingViewController"]
 - ["SQ", "SPTAuth"]
+- !private ["SQ", "TableViewController"]
+- !private ["SQ", "UINavigationController"]
 - !private ["SQ", "UIScreen"]
 - !private ["SQ", "UIWindow"]
 - !private ["SQ", "URL"]
@@ -242,8 +248,9 @@ depends-member:
 - !private ["SH", "Name"]
 - !private ["SH", "Notification"]
 - !private ["SH", "NotificationCenter"]
-- !private ["SH", "NowPlayingViewController"]
 - ["SH", "SPTAuth"]
+- !private ["SH", "TableViewController"]
+- !private ["SH", "UINavigationController"]
 - !private ["SH", "UIScreen"]
 - !private ["SH", "UIWindow"]
 - !private ["SH", "URL"]
@@ -290,10 +297,11 @@ depends-member:
 - !private ["So8NSObjectC", "NSKeyedArchiver"]
 - !private ["So8NSObjectC", "Notification"]
 - !private ["So8NSObjectC", "NotificationCenter"]
-- !private ["So8NSObjectC", "NowPlayingViewController"]
 - ["So8NSObjectC", "SPTAuth"]
 - ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "TableViewController"]
 - ["So8NSObjectC", "UIApplication"]
+- !private ["So8NSObjectC", "UINavigationController"]
 - !private ["So8NSObjectC", "UIScreen"]
 - ["So8NSObjectC", "UIWindow"]
 - ["So8NSObjectC", "URL"]
@@ -332,8 +340,9 @@ depends-member:
 - !private ["So8NSObjectP", "NSKeyedArchiver"]
 - !private ["So8NSObjectP", "Notification"]
 - !private ["So8NSObjectP", "NotificationCenter"]
-- !private ["So8NSObjectP", "NowPlayingViewController"]
 - ["So8NSObjectP", "SPTAuth"]
+- !private ["So8NSObjectP", "TableViewController"]
+- !private ["So8NSObjectP", "UINavigationController"]
 - !private ["So8NSObjectP", "UIScreen"]
 - !private ["So8NSObjectP", "UIWindow"]
 - !private ["So8NSObjectP", "URL"]
@@ -373,8 +382,6 @@ depends-member:
 - !private ["10Foundation12NotificationV", "Name"]
 - !private ["So20NSNotificationCenterC", "default"]
 - !private ["So20NSNotificationCenterC", "post"]
-- !private ["10WavePlayer24NowPlayingViewControllerC", "deinit"]
-- !private ["10WavePlayer24NowPlayingViewControllerC", "init"]
 - !private ["SY", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "Name"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
@@ -383,6 +390,8 @@ depends-member:
 - ["So7SPTAuthC", "init"]
 - !private ["So7SPTAuthC", "redirectURL"]
 - !private ["So7SPTAuthC", "sessionUserDefaultsKey"]
+- !private ["10WavePlayer19TableViewControllerC", "deinit"]
+- !private ["10WavePlayer19TableViewControllerC", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "makeKeyAndVisible"]
 - !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
@@ -396,8 +405,9 @@ depends-member:
 - !private ["So21UIApplicationDelegateP", "NSKeyedArchiver"]
 - !private ["So21UIApplicationDelegateP", "Notification"]
 - !private ["So21UIApplicationDelegateP", "NotificationCenter"]
-- !private ["So21UIApplicationDelegateP", "NowPlayingViewController"]
 - ["So21UIApplicationDelegateP", "SPTAuth"]
+- !private ["So21UIApplicationDelegateP", "TableViewController"]
+- !private ["So21UIApplicationDelegateP", "UINavigationController"]
 - !private ["So21UIApplicationDelegateP", "UIScreen"]
 - !private ["So21UIApplicationDelegateP", "UIWindow"]
 - !private ["So21UIApplicationDelegateP", "URL"]
@@ -434,12 +444,14 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "init"]
 - !private ["So20UIFocusItemContainerP", "makeKeyAndVisible"]
 - !private ["So20UIFocusItemContainerP", "rootViewController"]
+- !private ["So22UINavigationControllerC", "init"]
 - ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSKeyedArchiver"]
 - !private ["So30UIPasteConfigurationSupportingP", "Notification"]
 - !private ["So30UIPasteConfigurationSupportingP", "NotificationCenter"]
-- !private ["So30UIPasteConfigurationSupportingP", "NowPlayingViewController"]
 - ["So30UIPasteConfigurationSupportingP", "SPTAuth"]
+- !private ["So30UIPasteConfigurationSupportingP", "TableViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "UINavigationController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIScreen"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIWindow"]
 - !private ["So30UIPasteConfigurationSupportingP", "URL"]
@@ -468,10 +480,11 @@ depends-member:
 - !private ["So11UIResponderC", "NSKeyedArchiver"]
 - !private ["So11UIResponderC", "Notification"]
 - !private ["So11UIResponderC", "NotificationCenter"]
-- !private ["So11UIResponderC", "NowPlayingViewController"]
 - ["So11UIResponderC", "SPTAuth"]
 - ["So11UIResponderC", "String"]
+- !private ["So11UIResponderC", "TableViewController"]
 - ["So11UIResponderC", "UIApplication"]
+- !private ["So11UIResponderC", "UINavigationController"]
 - !private ["So11UIResponderC", "UIScreen"]
 - ["So11UIResponderC", "UIWindow"]
 - ["So11UIResponderC", "URL"]
@@ -499,8 +512,9 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "NSKeyedArchiver"]
 - !private ["So30UIResponderStandardEditActionsP", "Notification"]
 - !private ["So30UIResponderStandardEditActionsP", "NotificationCenter"]
-- !private ["So30UIResponderStandardEditActionsP", "NowPlayingViewController"]
 - ["So30UIResponderStandardEditActionsP", "SPTAuth"]
+- !private ["So30UIResponderStandardEditActionsP", "TableViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "UINavigationController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIScreen"]
 - !private ["So30UIResponderStandardEditActionsP", "UIWindow"]
 - !private ["So30UIResponderStandardEditActionsP", "URL"]
@@ -526,7 +540,11 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "window"]
 - !private ["So8UIScreenC", "bounds"]
 - !private ["So8UIScreenC", "main"]
+- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So21UITableViewControllerC", "init"]
+- !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So19UITableViewDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "bounds"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "main"]
@@ -536,8 +554,9 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "NSKeyedArchiver"]
 - !private ["So23UIUserActivityRestoringP", "Notification"]
 - !private ["So23UIUserActivityRestoringP", "NotificationCenter"]
-- !private ["So23UIUserActivityRestoringP", "NowPlayingViewController"]
 - ["So23UIUserActivityRestoringP", "SPTAuth"]
+- !private ["So23UIUserActivityRestoringP", "TableViewController"]
+- !private ["So23UIUserActivityRestoringP", "UINavigationController"]
 - !private ["So23UIUserActivityRestoringP", "UIScreen"]
 - !private ["So23UIUserActivityRestoringP", "UIWindow"]
 - !private ["So23UIUserActivityRestoringP", "URL"]
@@ -579,8 +598,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSKeyedArchiver"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Notification"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "NowPlayingViewController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "SPTAuth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "TableViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UINavigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIWindow"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
@@ -642,10 +662,10 @@ depends-nominal:
 - !private "So18NSNotificationNamea"
 - !private "10Foundation12NotificationV"
 - !private "So20NSNotificationCenterC"
-- !private "10WavePlayer24NowPlayingViewControllerC"
 - !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
 - "So7SPTAuthC"
+- !private "10WavePlayer19TableViewControllerC"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - !private "So21UIAppearanceContainerP"
@@ -657,11 +677,16 @@ depends-nominal:
 - !private "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
+- !private "So22UINavigationControllerC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - !private "So8UIScreenC"
+- !private "So20UIScrollViewDelegateP"
 - !private "So16UIStateRestoringP"
+- !private "So21UITableViewControllerC"
+- !private "So21UITableViewDataSourceP"
+- !private "So19UITableViewDelegateP"
 - !private "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"

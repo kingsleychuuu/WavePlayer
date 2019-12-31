@@ -29,7 +29,6 @@ depends-top-level:
 - !private "SPTAuthPlaylistReadPrivateScope"
 - !private "SPTAuthStreamingScope"
 - "SPTSession"
-- "StringLiteralType"
 - !private "UIApplication"
 - "UIButton"
 - "UIViewController"

@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AllMyFriends.mp3</key>
+		<data>
+		hElUsaNGMJUPUrp24MPt0tIgcIY=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		hRjFMDlGGulFesyfrDCS1SLGIjI=
+		sATilTg5fSWdXK7FfK8g61YmLlU=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -88,30 +92,49 @@
 		<data>
 		WoLHcJyyeGsSyBZmaAdBuP9inFQ=
 		</data>
+		<key>Home.mp3</key>
+		<data>
+		3IequrudZtUbJW1LVk9XCstgXMw=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		hu8O8HMXiNo7UGCIJ4h13egJPfc=
+		</data>
+		<key>NoGuidance.mp3</key>
+		<data>
+		Vbbh5T4j9V3G/fkHVYwJeBumwyY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>Serendipity.mp3</key>
+		<data>
+		v89FAkcDLba/TI2XETJ9rWGej3M=
+		</data>
+		<key>UGotThat.mp3</key>
+		<data>
+		vZFim+XsAbm6PeplXueNIexJWu0=
+		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
 		JI0FfNDsiJNt4VEol0ClchSYrYY=
 		</data>
-		<key>serendipity.mp3</key>
-		<data>
-		v89FAkcDLba/TI2XETJ9rWGej3M=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AllMyFriends.mp3</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			f51tmixZHKTyKaeRldwu9hghEAxSS1KUm5G1QDW4bIA=
+			</data>
+		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			32PBnlSJ4SCibUVtExN/96ybkefkGveHW7IBeRqZj5Q=
+			j4oJGjdEZtxQx7PVqsUrwQYf3/t32nWkFd1ZpRc6vtU=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -254,18 +277,39 @@
 			+g4HtACkRnZQNjsul0cYKfn4bi+BCKZLd8UwqYiwsv8=
 			</data>
 		</dict>
+		<key>Home.mp3</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AHOZED5aXTTVmH1xGFL/QMgmj3RzOwak3/h6VM5U9dM=
+			</data>
+		</dict>
+		<key>NoGuidance.mp3</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RcVAGL52X6S52qsQuFcyI1BJ7YKHzgz+jLSQxBnBUu8=
+			</data>
+		</dict>
+		<key>Serendipity.mp3</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NrsYVkINmnvV+WqiSGzq4qqy7IRZkFrrq20FBgx12Qk=
+			</data>
+		</dict>
+		<key>UGotThat.mp3</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rj3yPFjwMUPqBnudtNAZpYmLT58s1Roj+tGo/5XHFGk=
+			</data>
+		</dict>
 		<key>libswiftRemoteMirror.dylib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			eIXOb5PlcMHner9aY+kjfVfMPvTcWckqGh+1u9QvN8Y=
-			</data>
-		</dict>
-		<key>serendipity.mp3</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NrsYVkINmnvV+WqiSGzq4qqy7IRZkFrrq20FBgx12Qk=
 			</data>
 		</dict>
 	</dict>
